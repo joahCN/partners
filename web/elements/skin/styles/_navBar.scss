@@ -1,0 +1,7 @@
+.navbar-nav {
+  .nav-item {
+    &.active, &:hover {
+      border-bottom: 2px solid green;
+    }
+  }
+}
