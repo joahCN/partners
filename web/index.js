@@ -8,10 +8,12 @@ import reducer from "./redux/reducer/index.js"
 import { Router, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux'
 import routeConfigs from "./router.js"
+import fetchAPIMiddleware from "./redux/middleware/fetchAPIMiddleware.js"
+import {apiClient} from "../common/helper/index.js"
 
 const middlewareForRouting = routerMiddleware(browserHistory);
 
-let store = createStore(reducer, applyMiddleware(middlewareForRouting));
+let store = createStore(reducer, applyMiddleware(middlewareForRouting, fetchAPIMiddleware(apiClient)));
 
 const history = syncHistoryWithStore(browserHistory, store);
 

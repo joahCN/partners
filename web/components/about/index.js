@@ -4,8 +4,10 @@
 
 import {React} from "../../elements/core"
 
-export default ()=>{
+export default ({loadAboutItems, loadingStatus})=>{
     return <div>
-        This is about!
+        This is about page, changed again!
+        <button onClick = {()=>{loadAboutItems()}}>load</button>
+        {loadingStatus}
     </div>
 }

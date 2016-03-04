@@ -4,7 +4,7 @@
 import ImmutableUpdate from "react-addons-update";
 
 let initialNavBar = {
-    brand: "partner",
+    brand: "Partners",
     items: [
         {
             id: 1,
@@ -18,7 +18,8 @@ let initialNavBar = {
             isActive: false,
             route: "/about"
         }
-    ]
+    ],
+    loadingStatus: ""
 };
 
 export let pageHeader = (state = initialNavBar, action = {})=>{

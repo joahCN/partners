@@ -2,12 +2,18 @@
  * Created by joah.zhang on 2015/11/26.
  */
 var path = require("path");
+var webpack = require('webpack');
+
+var entry = ["bootstrap-loader", "./index.js"];
+if(process.env.NODE_ENV != "production") {
+    entry.unshift('webpack-hot-middleware/client?path=http://localhost:3002/__webpack_hmr')
+}
 
 module.exports = {
     devtool: '#source-map',
     context: path.join(__dirname, "web"),
     entry: {
-        index: ["bootstrap-loader", "./index.js"]
+        index: entry
     },
     output: {
         path: path.join(__dirname, "web", "build"),
@@ -30,5 +36,12 @@ module.exports = {
     resolve: {
         root: path.join(__dirname, "web"),
         extensions: ["", ".js"]
-    }
+    },
+    plugins: [
+        // Webpack 1.0
+        new webpack.optimize.OccurenceOrderPlugin(),
+        // Webpack 2.0 fixed this mispelling
+        // new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };

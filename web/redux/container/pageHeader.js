@@ -3,7 +3,7 @@
  */
 
 import { connect } from 'react-redux'
-import { navItemClick } from '../actions/pageHeader'
+import { navItemClick, loadNavItems } from '../actions/pageHeader'
 import {PageHeader} from "../../components/pageHeader/index.js"
 
 let mapStateToProps = (state) => {

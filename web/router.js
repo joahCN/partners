@@ -12,7 +12,8 @@ export default {
             path: "/about",
             getComponent: (location, cb)=>{
                 require.ensure([], (require)=>{
-                    cb(null, require("./components/about/index").default);
+                    //cb(null, require("./components/about/index").default);
+                    cb(null, require("./redux/container/about").default);
                 });
             }
         }
