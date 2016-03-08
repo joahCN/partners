@@ -1,7 +1,7 @@
 /**
  * Created by joah.zhang on 2016/3/3.
  */
-import ImmutableUpdate from "react-addons-update";
+import Immutable from "immutable"
 
 let initialNavBar = {
     brand: "Partners",
@@ -26,25 +26,17 @@ export let pageHeader = (state = initialNavBar, action = {})=>{
     switch(action.type) {
         case "navItemClick" :
             let item = action.item;
-            let activeIndex, oldIndex = 0;
-            state.items.forEach(function(_item, i) {
-                if(_item.id == item.id) {
-                    activeIndex = i;
-                }
-                if(_item.isActive) {
-                    oldIndex = i;
-                }
-            });
-            return ImmutableUpdate(state, {
-                items: {
-                    [oldIndex]: {
-                        isActive: {$set: false}
-                    },
-                    $splice: [[activeIndex, 1, ImmutableUpdate(item, {
-                        isActive: {$set: true}
-                    })]]
-                }
-            });
+            state = Immutable.fromJS(initialNavBar);
+
+            let updatedItems = state.update("items",(items) => {
+                return items.map((_item)=> {
+                    return _item.update("isActive",()=>{
+                        return _item.get("id") == item.id;
+                    } );
+                });
+            } );
+            return updatedItems.toJS();
+
         default:
             return state
     }

@@ -11,7 +11,7 @@ export class App extends React.Component {
             <div>
                 <PageHeaderContainer />
                 <div>
-                    content: {this.props.children}
+                    {this.props.children}
                 </div>
             </div>
         )

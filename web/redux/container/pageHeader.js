@@ -2,7 +2,7 @@
  * Created by joah.zhang on 2016/3/3.
  */
 
-import { connect } from 'react-redux'
+import { connect } from '../index'
 import { navItemClick, loadNavItems } from '../actions/pageHeader'
 import {PageHeader} from "../../components/pageHeader/index.js"
 

@@ -4,7 +4,7 @@
 var path = require("path");
 var webpack = require('webpack');
 
-var entry = ["bootstrap-loader", "./index.js"];
+var entry = ["bootstrap-loader","jquery", "./index.js"];
 if(process.env.NODE_ENV != "production") {
     entry.unshift('webpack-hot-middleware/client?path=http://localhost:3002/__webpack_hmr')
 }
@@ -34,7 +34,6 @@ module.exports = {
         ]
     },
     resolve: {
-        root: path.join(__dirname, "web"),
         extensions: ["", ".js"]
     },
     plugins: [
@@ -42,6 +41,11 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         // Webpack 2.0 fixed this mispelling
         // new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+
+        new webpack.ProvidePlugin({
+            "jQuery": "jquery",
+            "window.jQuery": "jquery"
+        })
     ]
 };

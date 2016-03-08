@@ -1,8 +1,7 @@
 /**
  * Created by joah.zhang on 2016/3/2.
  */
-import {React, ReactBootstrap, classNames} from "../core"
-import {Link} from "react-router"
+import {React, ReactBootstrap, classNames, Link} from "../core"
 
 export class NavBar extends React.Component {
 

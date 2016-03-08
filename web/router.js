@@ -1,12 +1,16 @@
 /**
  * Created by joah.zhang on 2016/3/3.
  */
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, browserHistory } from "./elements/core"
 import {App} from "./App.js"
+import Home from "./redux/container/home.js"
 
 export default {
     path: "/",
     component: App,
+    indexRoute: {
+        component: Home
+    },
     childRoutes: [
         {
             path: "/about",

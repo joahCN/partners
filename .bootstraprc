@@ -41,3 +41,7 @@ styles:
     wells: true
     responsive-embed: true
     close: true
+    carousel: true
+
+scripts:
+    carousel: true

@@ -1,13 +1,14 @@
 /**
  * Created by joah.zhang on 2016/3/3.
  */
-import { combineReducers } from 'redux'
+import { combineReducers, routerReducer } from '../index.js'
 import {pageHeader} from "./pageHeader.js"
 import about from "./about.js"
-import {routerReducer } from 'react-router-redux'
+import home from "./home.js"
 
 export default combineReducers({
     navBar: pageHeader,
     about,
+    home,
     routing: routerReducer
 })
