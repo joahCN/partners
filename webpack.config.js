@@ -4,7 +4,7 @@
 var path = require("path");
 var webpack = require('webpack');
 
-var entry = ["bootstrap-loader","jquery", "./index.js"];
+var entry = ["bootstrap-loader", "./index.js"];
 if(process.env.NODE_ENV != "production") {
     entry.unshift('webpack-hot-middleware/client?path=http://localhost:3002/__webpack_hmr')
 }

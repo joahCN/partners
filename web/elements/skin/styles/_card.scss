@@ -1,0 +1,26 @@
+.card {
+  background-color: $cardBackgroundColor;
+  border: 1px solid $cardBackgroundColor;
+  height: 200px;
+  width: 98%;
+  .card-left{
+    float: left;
+    width: 100px;
+    height: 100%;
+    margin: auto;
+    line-height: 200px;
+    text-align: center;
+  }
+  .card-right{
+    overflow: hidden;
+    padding: 15px 0;
+    .card-title{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .card-desc{
+      margin-top: 15px;
+      font-size: 16px;
+    }
+  }
+}

@@ -8,15 +8,14 @@ export class Card extends React.Component {
 
     render() {
         return (
-        <ReactBootstrap.Row className="show-grid">
-            <ReactBootstrap.Col md={4}>
-                <div><img src={this.props.project.host.image}/></div>
-                <p>{this.props.project.host.desc}</p>
-            </ReactBootstrap.Col>
-            <ReactBootstrap.Col md={8}>
-                <div>
-                    <h3>{this.props.project.title}</h3>
-                    <div>{this.props.project.desc}</div>
+        <ReactBootstrap.Row className="show-grid card">
+            <ReactBootstrap.Col>
+                <div className="card-left">
+                    <img src={this.props.project.host.image}/>
+                </div>
+                <div className="card-right">
+                    <div className="card-title">{this.props.project.title}</div>
+                    <p className="card-desc">{this.props.project.desc}</p>
                     <div></div>
                 </div>
             </ReactBootstrap.Col>

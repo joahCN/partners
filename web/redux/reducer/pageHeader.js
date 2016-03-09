@@ -1,7 +1,7 @@
 /**
  * Created by joah.zhang on 2016/3/3.
  */
-import Immutable from "immutable"
+import {Immutable} from "../../elements/core.js"
 
 let initialNavBar = {
     brand: "Partners",
