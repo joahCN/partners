@@ -1,7 +1,13 @@
-.navbar-nav {
-  .nav-item {
-    &.active, &:hover {
-      border-bottom: 2px solid green;
+.joah-navBar {
+  .navbar-default {
+    background-color: $navBarBgColor;
+    border:none;
+  }
+  .navbar-nav {
+    .nav-item {
+      &.active, &:hover {
+        border-bottom: 2px solid green;
+      }
     }
   }
 }

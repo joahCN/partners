@@ -14,7 +14,7 @@ export class NavBar extends React.Component {
                 <Link to={navItem.route}>{navItem.title}</Link>
             </li>
         });
-        return <ReactBootstrap.Navbar>
+        return <ReactBootstrap.Navbar >
             <ReactBootstrap.Navbar.Header>
                 <ReactBootstrap.Navbar.Brand>
                     <a href="#">{this.props.brand}</a>

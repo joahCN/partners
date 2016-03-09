@@ -15,8 +15,13 @@ export class Card extends React.Component {
                 </div>
                 <div className="card-right">
                     <div className="card-title">{this.props.project.title}</div>
-                    <p className="card-desc">{this.props.project.desc}</p>
-                    <div></div>
+                    <p className="card-desc">
+                        <i className="fa fa-quote-left fa-pull-left"></i>
+                        {this.props.project.desc}
+                        <i className="fa fa-quote-right fa-pull-right"></i>
+                    </p>
+                    <div className="card-label"><span className="label label-info">internet</span></div>
+                    <div><i className="fa fa-user fa-lg font-icon active"></i><i className="fa fa-user font-icon fa-lg active"></i><i className="fa fa-user font-icon fa-lg"></i></div>
                 </div>
             </ReactBootstrap.Col>
         </ReactBootstrap.Row>
