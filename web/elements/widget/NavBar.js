@@ -14,7 +14,7 @@ export class NavBar extends React.Component {
                 <Link to={navItem.route}>{navItem.title}</Link>
             </li>
         });
-        return <ReactBootstrap.Navbar >
+        return <ReactBootstrap.Navbar className="core-navBar">
             <ReactBootstrap.Navbar.Header>
                 <ReactBootstrap.Navbar.Brand>
                     <a href="#">{this.props.brand}</a>
@@ -22,6 +22,10 @@ export class NavBar extends React.Component {
             </ReactBootstrap.Navbar.Header>
             <ReactBootstrap.Nav>
                 {navItems}
+            </ReactBootstrap.Nav>
+            <ReactBootstrap.Nav pullRight className="right-align">
+                <li className="nav-item right-align-button"><ReactBootstrap.Button bsStyle="warning" bsSize="small"><i className="fa fa-user-plus"></i>Launch a project</ReactBootstrap.Button></li>
+                <li className="nav-item right-align-button"><ReactBootstrap.Button bsStyle="primary" bsSize="small"><i className="fa fa-sign-in"></i>Login</ReactBootstrap.Button></li>
             </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>
     }

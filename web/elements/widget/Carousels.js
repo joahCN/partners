@@ -8,7 +8,7 @@ export class Carousels extends React.Component {
     render () {
         let items = this.props.items.map(function(item) {
             return <ReactBootstrap.CarouselItem>
-                <img width={1280} height={300} alt="900x500" src={item.src}/>
+                <img width={1880} height={300} alt="900x500" src={item.src}/>
                 <div className="carousel-caption">
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>

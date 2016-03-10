@@ -3,6 +3,9 @@
  */
 import {React, ReactBootstrap, classNames} from "../../elements/core"
 import {Carousels, Card} from "../../elements/index"
+import CardsPanel from "./cardsPanel.js"
+import ProfilesPanel from "./profilesPanel.js"
+
 import "./_style.scss"
 
 export class Home extends React.Component {
@@ -17,23 +20,8 @@ export class Home extends React.Component {
                         </ReactBootstrap.Col>
                     </ReactBootstrap.Row>
                 </ReactBootstrap.Grid>
-                <div className="cards-bg">
-                    <ReactBootstrap.Grid>
-                        <ReactBootstrap.Row>
-                            <ReactBootstrap.Col xs={12} className="cards-header">
-                                <h2>Latest update</h2><span>internet</span><span>trading</span>
-                            </ReactBootstrap.Col>
-                        </ReactBootstrap.Row>
-                        <ReactBootstrap.Row className="show-grid">
-                            <ReactBootstrap.Col xs={12} md={6}>
-                                <Card project={this.props.project}></Card>
-                            </ReactBootstrap.Col>
-                            <ReactBootstrap.Col xs={12} md={6}>
-                                <Card project={this.props.project}></Card>
-                            </ReactBootstrap.Col>
-                        </ReactBootstrap.Row>
-                    </ReactBootstrap.Grid>
-                </div>
+                <CardsPanel project={this.props.project} />
+                <ProfilesPanel profiles = {this.props.profiles}/>
             </div>
            );
     }

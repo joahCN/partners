@@ -1,13 +1,22 @@
-.joah-navBar {
-  .navbar-default {
-    background-color: $navBarBgColor;
-    border:none;
+.core-navBar {
+  .right-align {
+    line-height: 50px;
+    .right-align-button {
+      margin-left: 15px;
+    }
   }
-  .navbar-nav {
-    .nav-item {
-      &.active, &:hover {
-        border-bottom: 2px solid green;
-      }
+  i {
+    padding-right: 5px;
+  }
+}
+.navbar-default {
+  background-color: $navBarBgColor;
+  border:none;
+}
+.navbar-nav {
+  .nav-item {
+    &.active, &:hover {
+      border-bottom: 2px solid green;
     }
   }
 }

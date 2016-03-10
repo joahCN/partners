@@ -8,13 +8,13 @@ let initialNavBar = {
     items: [
         {
             id: 1,
-            title: "join a team",
+            title: "Assembly",
             isActive: true,
             route: "/"
         },
         {
             id: 2,
-            title: "launch a project",
+            title: "Dreamer",
             isActive: false,
             route: "/about"
         }
