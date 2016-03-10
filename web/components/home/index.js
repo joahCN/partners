@@ -20,7 +20,7 @@ export class Home extends React.Component {
                         </ReactBootstrap.Col>
                     </ReactBootstrap.Row>
                 </ReactBootstrap.Grid>
-                <CardsPanel project={this.props.project} />
+                <CardsPanel projects={this.props.projects} />
                 <ProfilesPanel profiles = {this.props.profiles}/>
             </div>
            );

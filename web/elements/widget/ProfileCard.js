@@ -10,7 +10,7 @@ export class ProfileCard extends React.Component {
         return (
             <div className="profile-card">
                 <div className="profile-card-image">
-                    <img src={this.props.image}/>
+                    <img className="img-circle" src={this.props.image}/>
                 </div>
                 <p className="profile-card-desc">
                     <span>{this.props.name}</span>

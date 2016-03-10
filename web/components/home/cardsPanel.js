@@ -7,6 +7,15 @@ import {Card} from "../../elements/index"
 export default class CardsPanel extends React.Component {
 
     render() {
+        let projects = this.props.projects.map((project, index)=>{
+            return (
+                <ReactBootstrap.Col xs={12} md={6} className="cards-card">
+                    <div className = {classNames({"card-panel-gutter-left": index%2 == 1, "card-panel-gutter-right": index%2 == 0})}>
+                        <Card {...project}></Card>
+                    </div>
+                </ReactBootstrap.Col>
+            );
+        });
         return (
             <div>
                 <div className="cards-bg">
@@ -17,21 +26,9 @@ export default class CardsPanel extends React.Component {
                             </ReactBootstrap.Col>
                         </ReactBootstrap.Row>
                         <ReactBootstrap.Row className="cards-row">
-                            <ReactBootstrap.Col xs={12} md={6}>
-                                <Card project={this.props.project}></Card>
-                            </ReactBootstrap.Col>
-                            <ReactBootstrap.Col xs={12} md={6}>
-                                <Card project={this.props.project}></Card>
-                            </ReactBootstrap.Col>
+                            {projects}
                         </ReactBootstrap.Row>
-                        <ReactBootstrap.Row className="cards-row">
-                            <ReactBootstrap.Col xs={12} md={6}>
-                                <Card project={this.props.project}></Card>
-                            </ReactBootstrap.Col>
-                            <ReactBootstrap.Col xs={12} md={6}>
-                                <Card project={this.props.project}></Card>
-                            </ReactBootstrap.Col>
-                        </ReactBootstrap.Row>
+
                     </ReactBootstrap.Grid>
                 </div>
             </div>

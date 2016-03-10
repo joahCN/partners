@@ -7,7 +7,7 @@ import {Home} from "../../components/home/index.js"
 let mapStateToProps = (state) => {
     return {
         items: state.home.carouselsItems,
-        project: state.home.project,
+        projects: state.home.projects,
         profiles: state.home.profiles
     }
 };

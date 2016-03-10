@@ -10,6 +10,15 @@
     margin: 20px 0;
     .cards-row {
       margin-bottom: 20px;
+      .card-panel-gutter-left {
+        margin-left: 10px;
+      }
+      .card-panel-gutter-right {
+        margin-right: 10px;
+      }
+      .cards-card {
+        margin-bottom: 20px;
+      }
     }
   }
   .cards-header {
@@ -32,8 +41,20 @@
     background-color: $profilesBGColor;
     .profiles-item {
       text-align: center;
-      border: 1px solid #ccc;
       padding: 20px;
+      .profile-item-first, .profile-item-second, .profile-item-last {
+        padding: 20px 0;
+        background-color: gainsboro;
+      }
+      .profile-item-first {
+        margin-left: -15px;
+      }
+      .profile-item-second {
+
+      }
+      .profile-item-last {
+        margin-right: -15px;
+      }
     }
   }
   .profiles-header {
