@@ -3,4 +3,9 @@
   .profile-card-image {
     height: 40%;
   }
+  .profile-card-desc {
+    max-height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

@@ -42,9 +42,11 @@
     .profiles-item {
       text-align: center;
       padding: 20px;
+      height: 300px;
       .profile-item-first, .profile-item-second, .profile-item-last {
         padding: 20px 0;
         background-color: gainsboro;
+        height: 100%;
       }
       .profile-item-first {
         margin-left: -15px;

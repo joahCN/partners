@@ -73,6 +73,18 @@ let initialState = {
             name: "John",
             desc: "I'm a export of driver",
             label: "driver"
+        },
+        {
+            image: "http://placehold.it/80x80",
+            name: "John",
+            desc: "I'm a export of driver",
+            label: "driver"
+        },
+        {
+            image: "http://placehold.it/80x80",
+            name: "John",
+            desc: "I'm a export of driver",
+            label: "driver"
         }
     ]
 };

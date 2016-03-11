@@ -12,12 +12,14 @@ export class ProfileCard extends React.Component {
                 <div className="profile-card-image">
                     <img className="img-circle" src={this.props.image}/>
                 </div>
-                <p className="profile-card-desc">
+                <p>
                     <span>{this.props.name}</span>
+                </p>
+                <p className="profile-card-desc">
                     <span>{this.props.desc}</span>
                 </p>
                 <div className="profile-card-labels">
-                    <label>{this.props.label}</label>
+                    <span className="label label-info">{this.props.label}</span>
                 </div>
             </div>
 
