@@ -2,7 +2,7 @@
  * Created by Administrator on 2016/3/8.
  */
 
-import {React, ReactBootstrap} from "../core.js"
+import {React, ReactBootstrap, Link} from "../core.js"
 
 export class Card extends React.Component {
 
@@ -14,7 +14,7 @@ export class Card extends React.Component {
                     <img src={this.props.host.image}/>
                 </div>
                 <div className="card-right">
-                    <div className="card-title">{this.props.title}</div>
+                    <div className="card-title"><Link to={`/project/${this.props.id}`}>{this.props.title}</Link></div>
                     <p className="card-desc">
                         <i className="fa fa-quote-left fa-pull-left"></i>
                         {this.props.desc}

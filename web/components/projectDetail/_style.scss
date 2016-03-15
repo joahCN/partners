@@ -1,0 +1,21 @@
+.project-detail {
+  min-height: 800px;
+  .project-header {
+    h2 {
+      margin: 0;
+    }
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .project-desc {
+    min-height: 200px;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  .project-members {
+    .profile-card {
+      float:left;
+      margin-right: 20px;
+    }
+  }
+}

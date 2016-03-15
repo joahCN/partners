@@ -3,6 +3,7 @@
  */
 
 import {React, ReactBootstrap} from "../core.js"
+import {Labels} from "./Labels.js"
 
 export class ProfileCard extends React.Component {
 
@@ -19,7 +20,7 @@ export class ProfileCard extends React.Component {
                     <span>{this.props.desc}</span>
                 </p>
                 <div className="profile-card-labels">
-                    <span className="label label-info">{this.props.label}</span>
+                    <Labels labels={this.props.labels}/>
                 </div>
             </div>
 

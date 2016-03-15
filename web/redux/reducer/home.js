@@ -22,7 +22,8 @@ let initialState = {
                 desc: "I'm a export of software"
             },
             title: "Change the world",
-            desc: "This project will change the world"
+            desc: "This project will change the world",
+            id: 1
         },
         {
             host: {
@@ -30,7 +31,8 @@ let initialState = {
                 desc: "I'm a export of software"
             },
             title: "Change the world",
-            desc: "This project will change the world"
+            desc: "This project will change the world",
+            id: 2
         },
         {
             host: {
@@ -38,7 +40,8 @@ let initialState = {
                 desc: "I'm a export of software"
             },
             title: "Change the world",
-            desc: "This project will change the world"
+            desc: "This project will change the world",
+            id: 3
         },
         {
             host: {
@@ -46,7 +49,8 @@ let initialState = {
                 desc: "I'm a export of software"
             },
             title: "Change the world",
-            desc: "This project will change the world"
+            desc: "This project will change the world",
+            id: 4
         }
     ],
     profiles: [
@@ -54,37 +58,79 @@ let initialState = {
             image: "http://placehold.it/80x80",
             name: "John",
             desc: "I'm a export of software",
-            label: "software engineer"
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ]
         },
         {
             image: "http://placehold.it/80x80",
             name: "John",
             desc: "I'm a export of trading",
-            label: "trader"
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ]
         },
         {
             image: "http://placehold.it/80x80",
             name: "John",
             desc: "I'm a export of sales",
-            label: "sales"
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ]
         },
         {
             image: "http://placehold.it/80x80",
             name: "John",
             desc: "I'm a export of driver",
-            label: "driver"
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ]
         },
         {
             image: "http://placehold.it/80x80",
             name: "John",
             desc: "I'm a export of driver",
-            label: "driver"
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ]
         },
         {
             image: "http://placehold.it/80x80",
             name: "John",
             desc: "I'm a export of driver",
-            label: "driver"
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ]
         }
     ]
 };

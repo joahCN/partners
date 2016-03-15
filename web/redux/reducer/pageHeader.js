@@ -9,8 +9,8 @@ let initialNavBar = {
         {
             id: 1,
             title: "Assembly",
-            isActive: true,
-            route: "/"
+            isActive: false,
+            route: "/projects"
         },
         {
             id: 2,

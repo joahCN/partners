@@ -1,0 +1,26 @@
+.core-list-filter {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  margin-bottom: 20px;
+  border-bottom: 1px dotted lightgray;
+  font-size: 18px;
+  .list-filter-category {
+    color: lightgray;
+    float: left;
+  }
+  ul.list-filter {
+    float: left;
+    padding-left: 0;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 20px;
+    }
+  }
+}

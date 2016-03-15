@@ -17,7 +17,7 @@ export class NavBar extends React.Component {
         return <ReactBootstrap.Navbar className="core-navBar">
             <ReactBootstrap.Navbar.Header>
                 <ReactBootstrap.Navbar.Brand>
-                    <a href="#">{this.props.brand}</a>
+                    <Link to="/">{this.props.brand}</Link>
                 </ReactBootstrap.Navbar.Brand>
             </ReactBootstrap.Navbar.Header>
             <ReactBootstrap.Nav>

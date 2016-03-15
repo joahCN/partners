@@ -1,0 +1,20 @@
+.projects {
+  min-height: 1000px;
+  .cards-bg {
+    background-color: lightgray;
+    padding: 10px 0;
+    margin: 20px 0;
+    .cards-row {
+      margin-bottom: 20px;
+      .card-panel-gutter-left {
+        margin-left: 10px;
+      }
+      .card-panel-gutter-right {
+        margin-right: 10px;
+      }
+      .cards-card {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
