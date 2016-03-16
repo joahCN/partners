@@ -3,7 +3,7 @@
  */
 
 import {React, ReactBootstrap, classNames} from "../../elements/core"
-import {Card, ListFilter} from "../../elements/index"
+import {Card, ListFilter, CardsPanel} from "../../elements/index"
 
 import "./_style.scss"
 
@@ -31,11 +31,7 @@ export class Projects extends React.Component {
                     </ReactBootstrap.Row>
                 </ReactBootstrap.Grid>
                 <div className="cards-bg">
-                    <ReactBootstrap.Grid>
-                        <ReactBootstrap.Row className="cards-row">
-                            {projects}
-                        </ReactBootstrap.Row>
-                    </ReactBootstrap.Grid>
+                    <CardsPanel projects={this.props.projects} lineSize={4} />
                 </div>
             </div>
         );
