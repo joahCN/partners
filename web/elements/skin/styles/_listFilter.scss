@@ -7,11 +7,9 @@
   &:after {
     clear: both;
   }
-  margin-bottom: 20px;
-  border-bottom: 1px dotted lightgray;
   font-size: 18px;
+  box-shadow: 0 2px 2px -2px #ccc;
   .list-filter-category {
-    color: lightgray;
     float: left;
   }
   ul.list-filter {

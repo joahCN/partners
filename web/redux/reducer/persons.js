@@ -1,37 +1,19 @@
 import {Immutable} from "../../elements/core.js"
 
 let initialState = {
-    project: {
-        host: {
-            image: "http://placehold.it/80x80",
-            desc: "I'm a export of software"
+    items: [
+        {
+            name: "internet"
         },
-        title: "Change the world",
-        desc: "This project will change the world",
-        id: 1,
-        labels: [
-            {
-                text: "internet"
-            },
-            {
-                text: "sales"
-            }
-        ]
-    },
-    sponsor: {
-        image: "http://placehold.it/80x80",
-        name: "John",
-        desc: "I'm a export of software",
-        labels: [
-            {
-                text: "CEO"
-            },
-            {
-                text: "Engineer"
-            }
-        ]
-    },
-    members: [
+        {
+            name: "education"
+        },
+        {
+            name: "sales"
+        }
+    ],
+    category: "Projects category",
+    persons: [
         {
             image: "http://placehold.it/80x80",
             name: "John",
@@ -44,11 +26,11 @@ let initialState = {
                     text: "Engineer"
                 }
             ],
-            isSimple: true
+            id: 1
         },
         {
             image: "http://placehold.it/80x80",
-            name: "Smith",
+            name: "John",
             desc: "I'm a export of software",
             labels: [
                 {
@@ -58,11 +40,11 @@ let initialState = {
                     text: "Engineer"
                 }
             ],
-            isSimple: true
+            id: 1
         },
         {
             image: "http://placehold.it/80x80",
-            name: "cherry",
+            name: "John",
             desc: "I'm a export of software",
             labels: [
                 {
@@ -72,7 +54,21 @@ let initialState = {
                     text: "Engineer"
                 }
             ],
-            isSimple: true
+            id: 1
+        },
+        {
+            image: "http://placehold.it/80x80",
+            name: "John",
+            desc: "I'm a export of software",
+            labels: [
+                {
+                    text: "CEO"
+                },
+                {
+                    text: "Engineer"
+                }
+            ],
+            id: 1
         }
     ]
 };

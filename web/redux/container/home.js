@@ -3,13 +3,24 @@
  */
 import { connect } from '../index'
 import {Home} from "../../components/home/index.js"
+import {loadLatestProjects} from "../actions/projects.js"
 
 let mapStateToProps = (state) => {
     return {
         items: state.home.carouselsItems,
         projects: state.home.projects,
-        profiles: state.home.profiles
+        profiles: state.home.profiles,
+        projectsHeader: state.home.projectsHeader,
+        profilesHeader: state.home.profilesHeader
     }
 };
 
-export default connect(mapStateToProps, null)(Home);
+let mapDispatchToProps = (dispatch) => {
+    return {
+        loadLatestProjects: () => {
+            dispatch(loadLatestProjects())
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

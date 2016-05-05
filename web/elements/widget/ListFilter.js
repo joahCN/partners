@@ -14,7 +14,7 @@ export class ListFilter extends React.Component {
         });
         return (
             <div className="core-list-filter clearfix">
-                <span className="list-filter-category">{this.props.category}</span>
+                <span className="list-filter-category"><ReactBootstrap.Label bsStyle="success">{this.props.category}</ReactBootstrap.Label></span>
                 <ul className="list-filter">
                     {items}
                 </ul>

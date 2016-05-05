@@ -8,6 +8,9 @@
   i {
     padding-right: 5px;
   }
+  .brand-link {
+    color: white;
+  }
 }
 .navbar-default {
   background-color: $navBarBgColor;
@@ -15,8 +18,16 @@
 }
 .navbar-nav {
   .nav-item {
-    &.active, &:hover {
-      border-bottom: 2px solid green;
+    &.active {
+      background-color: $navBarItemActiveBGColor;
+      color: $navBarItemActiveColor;
+      a {
+        background-color: inherit;
+        color: inherit;
+      }
+    }
+    a {
+      color: $navBarLink;
     }
   }
 }

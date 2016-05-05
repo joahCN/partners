@@ -16,7 +16,7 @@ let initialNavBar = {
             id: 2,
             title: "Dreamer",
             isActive: false,
-            route: "/about"
+            route: "/persons"
         }
     ],
     loadingStatus: ""

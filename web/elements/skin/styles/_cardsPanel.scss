@@ -1,17 +1,17 @@
 .core-cards-panel {
-  .cards-row {
-    margin-bottom: 20px;
-    .card-panel-gutter-left {
-      margin-left: 10px;
-    }
-    .card-panel-gutter-right {
-      margin-right: 10px;
-    }
-    .card-panel-gutter-middle {
-      margin: 0 5px;
-    }
-    .cards-card {
-      margin-bottom: 20px;
-    }
+  .core-card {
+    margin-bottom: 10px;
+  }
+  .card-panel-gutter-left {
+    margin-left: 10px;
+  }
+  .card-panel-gutter-right {
+    margin-right: 10px;
+  }
+  .card-panel-gutter-middle {
+    margin: 0 5px;
+  }
+  .cards-card {
+    padding: 0;
   }
 }

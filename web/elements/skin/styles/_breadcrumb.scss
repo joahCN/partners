@@ -1,0 +1,21 @@
+.core-breadcrumb {
+  margin-bottom: 10px;
+  box-shadow: 0 4px 4px -4px gray;
+  line-height: 45px;
+  color: $breadcrumbLink;
+  vertical-align: middle;
+  h2 {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+  span {
+    margin: 0 10px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  h2, span {
+    line-height: inherit;
+  }
+}

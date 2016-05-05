@@ -3,12 +3,12 @@
  */
 var express = require("express");
 var path = require("path");
-var app = express();
-console.log("mode: "+ process.env.NODE_ENV);
+var apiRouters = require("./controller/index");
+require("./db");
 
-//if(process.env.NODE_ENV == "development") {
-//
-//}
+var app = express();
+//console.log("mode: "+ process.env.NODE_ENV);
+
 
 var webpackDevMiddleware = require("webpack-dev-middleware");
 var webpack = require("webpack");
@@ -21,10 +21,12 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 app.use(require("webpack-hot-middleware")(compiler));
 
-
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, "../web/index.html"))
 });
+
+app.use('/api/', apiRouters);
+
 app.get('/api/aboutItems', function(req, res) {
     res.send("request success");
 });

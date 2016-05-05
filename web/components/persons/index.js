@@ -3,15 +3,15 @@
  */
 
 import {React, ReactBootstrap, classNames} from "../../elements/core"
-import {Card, ListFilter, CardsPanel} from "../../elements/index"
+import {ProfileCard, ListFilter, CardsPanel} from "../../elements/index"
 
 import "./_style.scss"
 
-export class Projects extends React.Component {
+export class Persons extends React.Component {
 
     render() {
         return (
-            <div className="projects">
+            <div className="persons">
                 <ReactBootstrap.Grid>
                     <ReactBootstrap.Row>
                         <ReactBootstrap.Col xs={12}>
@@ -19,9 +19,9 @@ export class Projects extends React.Component {
                         </ReactBootstrap.Col>
                     </ReactBootstrap.Row>
                 </ReactBootstrap.Grid>
-                <div className="cards-bg">
+                <div className="">
                     <ReactBootstrap.Grid>
-                        <CardsPanel items={this.props.projects} lineSize={2} component={Card}/>
+                        <CardsPanel items={this.props.persons} lineSize={3} component={ProfileCard}/>
                     </ReactBootstrap.Grid>
                 </div>
             </div>

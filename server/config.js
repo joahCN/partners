@@ -1,21 +1,9 @@
-/**
- * Created by joah.zhang on 2016/3/8.
- */
-import {Immutable} from "../../elements/core.js"
 
-let initialState = {
-    carouselsItems: [
-        {
-            src: "http://www.itd.az/wp-content/uploads/2015/11/8interbusiness.jpg",
-            title: "image1",
-            desc: "desc1"
-        },
-        {
-            src: "http://www.itd.az/wp-content/uploads/2015/11/8interbusiness.jpg",
-            title: "image2",
-            desc: "desc2"
-        }
-    ],
+exports.dbConfig = {
+  url: 'mongodb://localhost:27017/partners'
+};
+
+exports.datas = {
     projects: [
         {
             host: {
@@ -134,49 +122,5 @@ let initialState = {
                 }
             ]
         }
-    ],
-    projectsHeader: {
-        headerLink: {
-            text: "Latest update",
-            route: ""
-        },
-        links: [
-            {
-                text: "internet",
-                route: ""
-            },
-            {
-                text: "trading",
-                route: ""
-            }
-        ]
-    },
-    profilesHeader: {
-        headerLink: {
-            text: "Latest dreamer",
-            route: ""
-        },
-        links: [
-            {
-                text: "internet",
-                route: ""
-            },
-            {
-                text: "trading",
-                route: ""
-            }
-        ]
-    }
+    ]
 };
-
-export default (state = initialState, action = {})=>{
-    switch (action.type) {
-        case "loadingLatestItemsSuccess":
-            let result = action.result;
-            let newState = Immutable.fromJS(state);
-            let updated = newState.setIn(["projects"], result.projects);
-            return updated.toJS();
-        default:
-            return state;
-    }
-}

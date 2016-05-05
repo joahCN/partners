@@ -31,11 +31,29 @@ export default {
             }
         },
         {
+            path: "/persons",
+            getComponent: (location, cb)=>{
+                require.ensure([], (require)=>{
+                    //cb(null, require("./components/about/index").default);
+                    cb(null, require("./redux/container/persons").default);
+                });
+            }
+        },
+        {
             path: "/project/:id",
             getComponent: (location, cb)=>{
                 require.ensure([], (require)=>{
                     //cb(null, require("./components/about/index").default);
                     cb(null, require("./redux/container/projectDetail").default);
+                });
+            }
+        },
+        {
+            path: "/profile/:id",
+            getComponent: (location, cb)=>{
+                require.ensure([], (require)=>{
+                    //cb(null, require("./components/about/index").default);
+                    cb(null, require("./redux/container/profile").default);
                 });
             }
         }

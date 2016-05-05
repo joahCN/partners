@@ -8,3 +8,5 @@ export {ProfileCard} from "./widget/ProfileCard.js"
 export {ListFilter} from "./widget/ListFilter.js";
 export {Labels} from "./widget/Labels.js"
 export {CardsPanel} from "./widget/CardsPanel.js"
+export {ProfileCardsPanel} from "./widget/ProfileCardsPanel.js"
+export {Breadcrumb} from "./widget/Breadcrumb.js"
